@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --color-primary: #179A40;
+  --color-primaryContrast: #ACF7C5;
+  --color-secondary: #070D3D;
+  --color-secondaryContrast: #ACF7C5;
+
+}
+
+
+
+@font-face {
+  font-family: 'Mooxy';
+  src: url('/src/assets/font/MooxyRegular-8Ow2Z.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-conic {
+  background: conic-gradient(from 0deg at 50% 50%, #1FCF58, #083416);
+}
+
+.card-shadow {
+  box-shadow: 0 3.91px 3.91px rgba(0, 0, 0, 0.25);
+}
+
+.h2-font {
+  font-family: 'Mooxy';
+}
