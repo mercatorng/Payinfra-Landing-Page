@@ -21,7 +21,7 @@ export const HeroSection = ({ openModal }: HeroSectionProps) => {
               Trusted by Leading Fuel Marketers
             </span>
 
-            <h1 className="mb-6 leading-11 tracking-wide text-[50px] mt-14 h2-font">
+            <h1 className="mb-6 leading-tight tracking-wide text-[50px] mt-14 h2-font">
               Power your fuel business with fin-tech-grade control
             </h1>
 
