@@ -75,7 +75,7 @@ export const StatementSection = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-5xl h2-font tracking-wide" >
-            Corporate fuel payments are broken, and every fuel manager feels it
+            Why forward-thinking fuel marketers are innovating their fuel payment system.
           </h2>
         </div>
 
