@@ -64,7 +64,7 @@ export const HeroSection = ({ openModal }: HeroSectionProps) => {
                           className="absolute inset-0 z-20"
                         >
                           <video
-                            className="w-full h-full  rounded-2xl block"
+                            className="w-full h-full object-cover rounded-2xl "
                             src={demoVideo}
                             controls
                             autoPlay
