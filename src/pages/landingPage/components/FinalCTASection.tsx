@@ -15,11 +15,10 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({
           <div className="px-4 mx-auto text-center max-w-[40rem] sm:px-6 lg:px-8 py-16 ">
             <div className="flex flex-col items-center mb-14 text-center ">
               <h2 className="mb-4 text-5xl text-white tracking-wide h2-font">
-                Ready to Power Your Corporate Customers?
+                Ready to Power the Next Fuel Payment Revolution?
               </h2>
               <p className="max-w-[850px] text-xl text-primaryContrast">
-                Join fuel marketers building their own wallet and payment
-                ecosystems with PayInfra infrastructure.
+                Partner with PayInfra, the infrastructure helping fuel marketers and fleet operators digitize payments and loyalty across Africa 
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
