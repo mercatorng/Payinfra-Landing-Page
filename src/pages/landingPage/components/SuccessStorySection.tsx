@@ -87,7 +87,7 @@ export const SuccessStorySection = () => {
               </div>
                <img src={arrowDown} alt="" className="" width={32}/>
                 <div className="flex flex-col w-full py-7 px-6 gap-4 bg-primaryContrast/45 border border-primaryContrast/50 rounded-[10px]">
-               <h2 className="font-bold text-primary">After PayInfra</h2>
+               <h2 className="font-bold text-primaryContrast">After PayInfra</h2>
 
                <ul className="text-white list-disc list-inside">
                 <li>Digital wallet ecosystem</li>

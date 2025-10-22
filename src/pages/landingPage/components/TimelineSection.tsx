@@ -46,7 +46,7 @@ export const TimelineSection = () => {
       <section className="py-16 md:py-24 bg-primary/10">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-16 text-center">
-            <h2 className="mb-4 text-5xl h2-font " >
+            <h2 className="mb-4 text-5xl h2-font tracking-wide" >
               From Idea to Launch in Weeks.
             </h2>
             <p className="max-w-[652px] text-xl text-black/55">

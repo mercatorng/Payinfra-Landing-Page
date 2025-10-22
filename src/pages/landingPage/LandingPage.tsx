@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { StatementSection } from './components/StatementSection';
@@ -9,6 +8,7 @@ import { TimelineSection } from './components/TimelineSection';
 import { FinalCTASection } from './components/FinalCTASection';
 import { FooterSection } from './components/FooterSection';
 import { ContactForm } from './components/ContactForm';
+import { useState } from 'react';
 
 export const LandingPage = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);

@@ -53,7 +53,7 @@ export const InfrastructureSection = () => {
     <section className="py-16 md:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-5xl h2-font " >
+          <h2 className="mb-4 text-5xl h2-font tracking-wide" >
             The Infrastructure Behind Modern Corporate Fuel Ecosystems
           </h2>
           <p className="text-xl text-black/55">

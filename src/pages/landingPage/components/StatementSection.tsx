@@ -74,7 +74,7 @@ export const StatementSection = () => {
     <section className="bg-[#D9D9D9B2]/70 py-16 md:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-5xl h2-font " >
+          <h2 className="mb-4 text-5xl h2-font tracking-wide" >
             Corporate fuel payments are broken, and every fuel manager feels it
           </h2>
         </div>
@@ -98,7 +98,7 @@ export const StatementSection = () => {
           })}
         </div>
 
-        <div className="py-6 mt-4 bg-secondary rounded-2xl">
+        <div className="py-6 mt-4 bg-secondary rounded-2xl mx-7">
           <div className="px-2 mx-auto text-center max-w-7xl sm:px-4 lg:px-6">
             <p className="text-white max-w-4xl mx-auto font-semibold text-[28px]">
               PayInfra solves all this with a digital wallet built for fuel
