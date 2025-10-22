@@ -68,7 +68,7 @@ export const InfrastructureSection = () => {
             return (
               <div
                 key={index}
-                className="px-6 bg-white border rounded-lg card-shadow py-9 border-black/35"
+                className="px-6 bg-white border rounded-lg card-shadow py-9 border-[#00000040]"
                 
               >
                 <div className="flex items-center justify-center p-4 border rounded-lg w-fit bg-primary/15 border-primary/15 mb-11">
