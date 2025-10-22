@@ -64,7 +64,7 @@ export const TimelineSection = () => {
                 <span className="text-xl text-white">{card.id}</span>
               </div>
  
-               <div className="flex items-center justify-center p-4 mb-4 rounded-lg w-fit bg-primary/14">
+               <div className="flex items-center justify-center p-4 mb-4 rounded-lg w-fit bg-primary/15">
                     {Icon && <Icon className="text-primary" />}
                   </div>
 
