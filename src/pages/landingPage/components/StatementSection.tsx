@@ -71,10 +71,10 @@ export const StatementSection = () => {
   ];
 
   return (
-    <section className="bg-[#D9D9D9B2]/70 py-16 md:py-24">
+    <section className="bg-[#D9D9D9B2]/70 py-16 md:py-24" id="problem">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-5xl h2-font tracking-wide" >
+          <h2 className="mb-4 text-5xl tracking-wide h2-font" >
             Why forward-thinking fuel marketers are innovating their fuel payment system.
           </h2>
         </div>

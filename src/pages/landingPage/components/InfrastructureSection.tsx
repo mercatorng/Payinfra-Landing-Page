@@ -50,10 +50,10 @@ export const InfrastructureSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24" id="infrastructure">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-5xl h2-font tracking-wide" >
+          <h2 className="mb-4 text-5xl tracking-wide h2-font" >
             The Infrastructure Behind Modern Corporate Fuel Ecosystems
           </h2>
           <p className="text-xl text-black/55">

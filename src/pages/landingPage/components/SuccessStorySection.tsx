@@ -17,9 +17,17 @@ export const SuccessStorySection = () => {
       description: "Control over every driver and vehicle transaction",
     },
   ];
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+     
+    }
+  };
   return (
     <>
-      <section className="bg-secondary">
+      <section className="bg-secondary" id="case-study">
         <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 md:py-24">
           <div className="flex flex-col items-center justify-center mb-20 gap-7">
             <span className="px-8 py-2 font-medium border-2 rounded-full text-primary border-primary bg-white/17 ">
@@ -64,9 +72,9 @@ export const SuccessStorySection = () => {
               <div className="flex flex-wrap gap-4">
                 <button
                   className="flex items-center gap-2 px-12 py-4 text-xl font-semibold text-black transition-all duration-300 bg-white rounded-md card-shadow hover:bg-green-700 hover:scale-105 hover:shadow-xl active:scale-95"
-        
+                 onClick={()=> scrollToSection("form")}
                 >
-                  Speak to Sales{" "}
+                  Request Demo{" "}
                   {/* <ArrowRight
                     size={20}
                     className="transition-transform duration-300 group-hover:translate-x-1"

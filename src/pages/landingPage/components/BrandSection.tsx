@@ -59,10 +59,10 @@ export const BrandSection = () => {
   ];
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" id="white-label">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-16 text-center">
-            <h2 className="mb-4 text-5xl h2-font tracking-wide" >
+            <h2 className="mb-4 text-5xl tracking-wide h2-font" >
               We're the Infrastructure, You're the Brand.
             </h2>
             <p className="max-w-[652px] text-xl text-black/55">
@@ -76,7 +76,7 @@ export const BrandSection = () => {
                 <h2 className="text-2xl font-bold text-primary">You Own</h2>
 
                  {youown.map((keypoint, index) => (
-                  <div className="gap-5 flex flex-row" key={index}>
+                  <div className="flex flex-row gap-5" key={index}>
                     <div className="p-3.5 w-fit bg-white rounded-lg flex items-center justify-center">
                         <SquareCheck className="text-primary" />
                     

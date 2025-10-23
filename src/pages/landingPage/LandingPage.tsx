@@ -7,24 +7,24 @@ import { BrandSection } from './components/BrandSection';
 import { TimelineSection } from './components/TimelineSection';
 import { FinalCTASection } from './components/FinalCTASection';
 import { FooterSection } from './components/FooterSection';
-import { ContactForm } from './components/ContactForm';
-import { useState } from 'react';
+// import { ContactForm } from './components/ContactForm';
+// import { useState } from 'react';
 
 export const LandingPage = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  // const [isFormOpen, setIsFormOpen] = useState(false);
   return (
     <>
-    <div className="min-h-screen font-inter bg-white">
-      <Header openModal={setIsFormOpen}/>
-      <HeroSection openModal={setIsFormOpen}/>
+    <div className="min-h-screen bg-white font-inter">
+      <Header />
+      <HeroSection />
       <StatementSection />
       <InfrastructureSection />
       <SuccessStorySection />
       <BrandSection/>
       <TimelineSection/>
-      <FinalCTASection openModal={setIsFormOpen}/>
+      <FinalCTASection />
       <FooterSection/>
-      <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} />
+      {/* <ContactForm open={isFormOpen} onOpenChange={setIsFormOpen} /> */}
     </div>
     </>
 
