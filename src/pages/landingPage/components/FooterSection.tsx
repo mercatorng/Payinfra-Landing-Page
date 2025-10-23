@@ -37,7 +37,7 @@ export const FooterSection = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label="Twitter"
               >
-                <SocialIcon url="https://x.com/payinfra?t=tXHkKCcI8eriSQDYX4kkUA&s=09" label="X"/>
+                <SocialIcon target="_blank" rel="noopener noreferrer" url="https://x.com/payinfra?t=tXHkKCcI8eriSQDYX4kkUA&s=09" label="X"/>
               </motion.a>
               <motion.a 
                 
@@ -46,7 +46,7 @@ export const FooterSection = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label="LinkedIn"
               >
-                <SocialIcon  label="linkedin" url="https://www.linkedin.com/company/payinfra-io"/>
+                <SocialIcon  label="linkedin" target="_blank" rel="noopener noreferrer" url="https://www.linkedin.com/company/payinfra-io"/>
               </motion.a>
               <motion.a  
                 className="p-2 text-blue-300 transition-colors rounded-full hover:text-white hover:bg-blue-800/50"
@@ -54,7 +54,7 @@ export const FooterSection = () => {
                 whileTap={{ scale: 0.95 }}
                 aria-label="Instagram"
               >
-                <SocialIcon url="https://www.instagram.com/payinfra.io?igsh=MXB4M2Y1cjZjdW1scQ==" label="instagram"/>
+                <SocialIcon target="_blank" rel="noopener noreferrer" url="https://www.instagram.com/payinfra.io?igsh=MXB4M2Y1cjZjdW1scQ==" label="instagram"/>
               </motion.a>
               
             </motion.div>
