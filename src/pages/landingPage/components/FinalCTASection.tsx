@@ -44,7 +44,6 @@ export const FinalCTASection = () => {
     try {
       const response = await fetch("http://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
