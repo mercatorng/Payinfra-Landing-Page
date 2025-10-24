@@ -42,7 +42,7 @@ export const FinalCTASection = () => {
     };
 
     try {
-      const response = await fetch("https://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
+      const response = await fetch("http://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
