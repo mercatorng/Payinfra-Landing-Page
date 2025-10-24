@@ -49,7 +49,7 @@ const scrollToSection = (id: string) => {
           </div>
 
           {/* RIGHT SIDE */}<div className="relative ">
-              <div className="relative pt-24 pb-16 mt-16">
+              <div className="relative pb-16 md:pt-24 md:mt-16">
                 <div
                   style={{
                     backgroundImage: `url(${rectangle4})`,
