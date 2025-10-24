@@ -1,13 +1,13 @@
 import { ArrowRight, CheckCircle, Play } from "lucide-react";
 import { useState } from "react";
-import rectangle3 from "../../../assets/Rectangle3.png";
+import rectangle4 from "../../../assets/Rectangle4.png";
 import { motion, AnimatePresence } from "framer-motion";
 import demoVideo from "../../../assets/Payinfra Edited.mp4"; // 👈 your local video file
 
 
 
 export const HeroSection = () => {
-  const [playVideo, setPlayVideo] = useState(true);
+  const [playVideo, setPlayVideo] = useState(false);
   
 const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -52,7 +52,7 @@ const scrollToSection = (id: string) => {
               <div className="relative pt-24 pb-16 mt-16">
                 <div
                   style={{
-                    backgroundImage: `url(${rectangle3})`,
+                    backgroundImage: `url(${rectangle4})`,
                   }}
                   className="rounded-2xl p-8 md:p-12 shadow-2xl relative bg-no-repeat bg-cover bg-center w-full h-[400px]"
                 >
@@ -94,13 +94,13 @@ const scrollToSection = (id: string) => {
                         >
                           <div className="flex flex-col items-center gap-3">
                             <div
-                              className="flex items-center justify-center p-6 transition-all duration-300 border border-white rounded-full cursor-pointer bg-white/20 hover:border-white/60 hover:scale-110"
+                              className="flex items-center justify-center p-6 transition-all duration-300 border rounded-full cursor-pointer border-primary bg-white/20 hover:border-primary/60 hover:scale-110"
                               onClick={() => setPlayVideo(true)}
                             >
-                              <Play size={24} color="#ffffff" />
+                              <Play size={24} color="#179a40" className="text-primary"/>
                             </div>
-                            <p className="text-white">Watch Demo</p>
-                            <p className="text-white/80">See Payinfra in action</p>
+                            <p className="text-primary">Watch Demo</p>
+                            <p className="text-primary/80">See Payinfra in action</p>
                           </div>
                         </motion.div>
                       )}
