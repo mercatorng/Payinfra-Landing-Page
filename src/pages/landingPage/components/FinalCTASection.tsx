@@ -12,7 +12,6 @@ export const FinalCTASection = () => {
     email: "",
     company: "",
     phone: "",
-    fleetSize: "",
     message: "",
   });
 
@@ -20,55 +19,103 @@ export const FinalCTASection = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   const payload = {
+  //     to: ["payinfra@mercator.ng"],
+  //     subject: "Test Email from Payinfra",
+  //     from: "website@mercator.ng",
+  //     senderName: "Payinfra",
+  //     message: `
+  //       Hello this is a test email from payinfra:
+        
+  //        Name: ${formData.firstName} ${formData.lastName}
+  //        Email: ${formData.email}
+  //        Phone: ${formData.phone}
+  //        Company: ${formData.company}
+
+  //        Message:
+  //       ${formData.message || "No message provided."}
+  //     `,
+  //   };
+
+  //   try {
+  //     const response = await fetch("http://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(payload),
+  //     });
+
+  //     if (response.ok) {
+  //       toast.success("✅ Thank you! We'll be in touch soon.");
+  //       setFormData({
+  //         firstName: "",
+  //         lastName: "",
+  //         email: "",
+  //         company: "",
+  //         phone: "",
+  //         fleetSize: "",
+  //         message: "",
+  //       });
+  //     } else {
+  //       toast.error("❌ Failed to send message. Please try again.");
+  //     }
+  //   } catch (err) {
+  //     console.error("Email send error:", err);
+  //     toast.error("Something went wrong. Please try again.");
+  //   }
+  // };
+
+   const [loading, setLoading] = useState(false);
+
+  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const payload = {
-      to: ["payinfra@mercator.ng"],
-      subject: "Test Email from Payinfra",
-      from: "website@mercator.ng",
-      senderName: "Payinfra",
-      message: `
-        Hello this is a test email from payinfra:
-        
-         Name: ${formData.firstName} ${formData.lastName}
-         Email: ${formData.email}
-         Phone: ${formData.phone}
-         Company: ${formData.company}
-
-         Message:
-        ${formData.message || "No message provided."}
-      `,
-    };
+    setLoading(true);
 
     try {
-      const response = await fetch("http://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
+     
+      const res = await fetch("https://payinf.onrender.com/api/info", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          firstname: formData.firstName,
+          lastname: formData.lastName,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          request: formData.message,
+        }),
       });
 
-      if (response.ok) {
-        toast.success("✅ Thank you! We'll be in touch soon.");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          company: "",
-          phone: "",
-          fleetSize: "",
-          message: "",
-        });
-      } else {
-        toast.error("❌ Failed to send message. Please try again.");
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Something went wrong");
       }
-    } catch (err) {
-      console.error("Email send error:", err);
-      toast.error("Something went wrong. Please try again.");
+
+      toast.success("✅ Thank you! We'll be in touch soon.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (err: any) {
+      toast.error("❌ Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
+
 
   return (
     <>
@@ -200,7 +247,7 @@ export const FinalCTASection = () => {
                 type="submit"
                 className="flex-1 px-8 py-3 text-white transition-all duration-300 bg-green-600 rounded-md hover:bg-green-700 hover:scale-105 active:scale-95 card-shadow"
               >
-                Submit Request
+                {loading ? "Submitting..." : "Submit Request"}
               </button>
             </div>
           </form>
