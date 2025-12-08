@@ -21,101 +21,98 @@ export const FinalCTASection = () => {
 
    const [loading, setLoading] = useState(false);
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    const payload = {
-      to: ["payinfra@mercator.ng"],
-      subject: "Test Email from Payinfra",
-      from: "Payinfra.io",
-      senderName: "Payinfra",
-      message: `
-        Hello this is a test email from payinfra:
-        
-         Name: ${formData.firstName} ${formData.lastName}
-         Email: ${formData.email}
-         Phone: ${formData.phone}
-         Company: ${formData.company}
-
-         Message:
-        ${formData.message || "No message provided."}
-      `,
-    };
-
-    try {
-      const response = await fetch("http://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        toast.success("✅ Thank you! We'll be in touch soon.");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          company: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        toast.error("❌ Failed to send message. Please try again.");
-      }
-    } catch (err) {
-      console.error("Email send error:", err);
-      toast.error("Something went wrong. Please try again.");
-    }
-  };
-
-
-
-  
-
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
   //   setLoading(true);
+  //   const payload = {
+  //     to: ["payinfra@mercator.ng"],
+  //     subject: "Test Email from Payinfra",
+  //     from: "Payinfra.io",
+  //     senderName: "Payinfra",
+  //     message: `
+  //       Hello this is a test email from payinfra:
+        
+  //        Name: ${formData.firstName} ${formData.lastName}
+  //        Email: ${formData.email}
+  //        Phone: ${formData.phone}
+  //        Company: ${formData.company}
+
+  //        Message:
+  //       ${formData.message || "No message provided."}
+  //     `,
+  //   };
 
   //   try {
-     
-  //     const res = await fetch("https://payinf.onrender.com/api/info", {
+  //     const response = await fetch("https://oliverdejohnson-001-site1.gtempurl.com/api/Message/Send", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
   //       },
-  //       body: JSON.stringify({
-  //         firstname: formData.firstName,
-  //         lastname: formData.lastName,
-  //         company: formData.company,
-  //         email: formData.email,
-  //         phone: formData.phone,
-  //         request: formData.message,
-  //       }),
+  //       body: JSON.stringify(payload),
   //     });
 
-  //     const data = await res.json();
-
-  //     if (!res.ok) {
-  //       throw new Error(data.message || "Something went wrong");
+  //     if (response.ok) {
+  //       toast.success("✅ Thank you! We'll be in touch soon.");
+  //       setFormData({
+  //         firstName: "",
+  //         lastName: "",
+  //         email: "",
+  //         company: "",
+  //         phone: "",
+  //         message: "",
+  //       });
+  //     } else {
+  //       toast.error("❌ Failed to send message. Please try again.");
   //     }
-
-  //     toast.success("✅ Thank you! We'll be in touch soon.");
-  //     setFormData({
-  //       firstName: "",
-  //       lastName: "",
-  //       company: "",
-  //       email: "",
-  //       phone: "",
-  //       message: "",
-  //     });
-  //   } catch (err: any) {
-  //     toast.error("❌ Failed to send message. Please try again.");
-  //   } finally {
-  //     setLoading(false);
+  //   } catch (err) {
+  //     console.error("Email send error:", err);
+  //     toast.error("Something went wrong. Please try again.");
   //   }
   // };
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+     
+      const res = await fetch("https://payinf.onrender.com/api/info", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname: formData.firstName,
+          lastname: formData.lastName,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          request: formData.message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      toast.success("✅ Thank you! We'll be in touch soon.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (err: any) {
+      toast.error("❌ Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
   return (
